@@ -16,6 +16,7 @@
 		80071DFA26F5DEC500A4C777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80071DF826F5DEC500A4C777 /* LaunchScreen.storyboard */; };
 		80BC70FF26F60F870012D356 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC70FE26F60F870012D356 /* NewsDetailViewController.swift */; };
 		80BC710326F64C8C0012D356 /* LoadingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC710226F64C8C0012D356 /* LoadingViews.swift */; };
+		80BC711F26F653E50012D356 /* ModelUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC711E26F653E50012D356 /* ModelUnitTest.swift */; };
 		80D9979F26F5F2C5003EE09F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D9979D26F5F2C5003EE09F /* NewsTableViewCell.swift */; };
 		80D997A026F5F2C5003EE09F /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D9979E26F5F2C5003EE09F /* NewsTableViewCell.xib */; };
 		80D997A726F5F54C003EE09F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D997A626F5F54C003EE09F /* Date.swift */; };
@@ -29,6 +30,16 @@
 		80F5688526F5E8CA000ED1BD /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F5688426F5E8CA000ED1BD /* ShowAlert.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		80BC711326F652990012D356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80071DE226F5DEBC00A4C777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80071DE926F5DEBC00A4C777;
+			remoteInfo = planday;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2BA235AE73F7CC1440B6B7DB /* Pods-planday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-planday.release.xcconfig"; path = "Target Support Files/Pods-planday/Pods-planday.release.xcconfig"; sourceTree = "<group>"; };
 		80071DEA26F5DEBC00A4C777 /* planday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = planday.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +52,9 @@
 		80071DFB26F5DEC500A4C777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80BC70FE26F60F870012D356 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		80BC710226F64C8C0012D356 /* LoadingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViews.swift; sourceTree = "<group>"; };
+		80BC710E26F652990012D356 /* plandayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = plandayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80BC711D26F653E50012D356 /* plandayTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "plandayTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		80BC711E26F653E50012D356 /* ModelUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUnitTest.swift; sourceTree = "<group>"; };
 		80D9979D26F5F2C5003EE09F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		80D9979E26F5F2C5003EE09F /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		80D997A626F5F54C003EE09F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				14890D8916E6C51302467FDF /* Pods_planday.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80BC710B26F652990012D356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				80071DEA26F5DEBC00A4C777 /* planday.app */,
+				80BC710E26F652990012D356 /* plandayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +120,7 @@
 		80071DEC26F5DEBC00A4C777 /* planday */ = {
 			isa = PBXGroup;
 			children = (
+				80BC711C26F653C80012D356 /* UnitTests */,
 				80F5688326F5E8C1000ED1BD /* Helpers */,
 				80F5687626F5E1BE000ED1BD /* Constants */,
 				80F5687026F5E0B3000ED1BD /* Extensions */,
@@ -114,6 +137,15 @@
 				80071DFB26F5DEC500A4C777 /* Info.plist */,
 			);
 			path = planday;
+			sourceTree = "<group>";
+		};
+		80BC711C26F653C80012D356 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				80BC711E26F653E50012D356 /* ModelUnitTest.swift */,
+				80BC711D26F653E50012D356 /* plandayTests-Bridging-Header.h */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 		80F5686C26F5E092000ED1BD /* Model */ = {
@@ -200,6 +232,24 @@
 			productReference = 80071DEA26F5DEBC00A4C777 /* planday.app */;
 			productType = "com.apple.product-type.application";
 		};
+		80BC710D26F652990012D356 /* plandayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80BC711526F652990012D356 /* Build configuration list for PBXNativeTarget "plandayTests" */;
+			buildPhases = (
+				80BC710A26F652990012D356 /* Sources */,
+				80BC710B26F652990012D356 /* Frameworks */,
+				80BC710C26F652990012D356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80BC711426F652990012D356 /* PBXTargetDependency */,
+			);
+			name = plandayTests;
+			productName = plandayTests;
+			productReference = 80BC710E26F652990012D356 /* plandayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +261,11 @@
 				TargetAttributes = {
 					80071DE926F5DEBC00A4C777 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					80BC710D26F652990012D356 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+						TestTargetID = 80071DE926F5DEBC00A4C777;
 					};
 				};
 			};
@@ -228,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				80071DE926F5DEBC00A4C777 /* planday */,
+				80BC710D26F652990012D356 /* plandayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,6 +297,13 @@
 				80071DF726F5DEC500A4C777 /* Assets.xcassets in Resources */,
 				80D997A026F5F2C5003EE09F /* NewsTableViewCell.xib in Resources */,
 				80071DF526F5DEBC00A4C777 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80BC710C26F652990012D356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +374,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		80BC710A26F652990012D356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80BC711F26F653E50012D356 /* ModelUnitTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80BC711426F652990012D356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80071DE926F5DEBC00A4C777 /* planday */;
+			targetProxy = 80BC711326F652990012D356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		80071DF326F5DEBC00A4C777 /* Main.storyboard */ = {
@@ -489,6 +568,51 @@
 			};
 			name = Release;
 		};
+		80BC711626F652990012D356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XXYB66DA42;
+				INFOPLIST_FILE = plandayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.efemaz.plandayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "planday/UnitTests/plandayTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/planday.app/planday";
+			};
+			name = Debug;
+		};
+		80BC711726F652990012D356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XXYB66DA42;
+				INFOPLIST_FILE = plandayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.efemaz.plandayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "planday/UnitTests/plandayTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/planday.app/planday";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -506,6 +630,15 @@
 			buildConfigurations = (
 				80071DFF26F5DEC500A4C777 /* Debug */,
 				80071E0026F5DEC500A4C777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80BC711526F652990012D356 /* Build configuration list for PBXNativeTarget "plandayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80BC711626F652990012D356 /* Debug */,
+				80BC711726F652990012D356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

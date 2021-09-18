@@ -24,6 +24,10 @@ class NewsViewController: UIViewController {
         populateUI()
     }
     
+    override func didReceiveMemoryWarning() {
+       super.didReceiveMemoryWarning()
+    }
+    
     func getNews() {
         let parameters: [String: String] = [
             "q": searchParameter,
