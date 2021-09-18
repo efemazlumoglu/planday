@@ -1,0 +1,6 @@
+framework module Pods_planday {
+  umbrella header "Pods-planday-umbrella.h"
+
+  export *
+  module * { export * }
+}
