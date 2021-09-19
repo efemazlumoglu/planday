@@ -19,6 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="obV-0O-omd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -74,8 +75,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo3-Ay-uWu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="60" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo3-Ay-uWu">
                                         <rect key="frame" x="20" y="401" width="374" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="N4k-YM-iXJ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -86,10 +90,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-RA-PhV">
-                                        <rect key="frame" x="20" y="482.5" width="369" height="33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-RA-PhV">
+                                        <rect key="frame" x="20" y="482.5" width="369" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="ZmM-XF-F5S"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Open Source">
+                                        <state key="normal" title="Please click to see all">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -110,7 +117,7 @@
                                     <constraint firstItem="VB3-1K-tbi" firstAttribute="leading" secondItem="FP2-RA-PhV" secondAttribute="leading" id="WMM-g4-3hu"/>
                                     <constraint firstItem="BEZ-bq-vjh" firstAttribute="leading" secondItem="eo3-Ay-uWu" secondAttribute="leading" id="WyR-Uc-gjD"/>
                                     <constraint firstItem="eo3-Ay-uWu" firstAttribute="leading" secondItem="VB3-1K-tbi" secondAttribute="leading" id="Xbf-H8-3Ne"/>
-                                    <constraint firstAttribute="bottom" secondItem="FP2-RA-PhV" secondAttribute="bottom" constant="258.5" id="cOA-o4-NNt"/>
+                                    <constraint firstAttribute="bottom" secondItem="FP2-RA-PhV" secondAttribute="bottom" constant="658.5" id="ZzZ-vw-QJz"/>
                                     <constraint firstItem="npd-BO-ogM" firstAttribute="top" secondItem="74W-q0-eQR" secondAttribute="top" id="eIl-Uh-F6x"/>
                                     <constraint firstItem="hKH-2R-YE5" firstAttribute="top" secondItem="npd-BO-ogM" secondAttribute="bottom" constant="20" id="gAP-Eo-3M5"/>
                                     <constraint firstAttribute="trailing" secondItem="FP2-RA-PhV" secondAttribute="trailing" constant="25" id="jII-fE-Qxg"/>

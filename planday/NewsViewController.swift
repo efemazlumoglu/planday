@@ -13,7 +13,7 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var news: NewsModel?
-    var searchParameter: String = "Apple"
+    var searchParameter: String = "everything"
     var index: Int = 0
     let spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
 
@@ -31,7 +31,8 @@ class NewsViewController: UIViewController {
     func getNews() {
         let parameters: [String: String] = [
             "q": searchParameter,
-            "apiKey": Constants.API_KEY
+            "apiKey": Constants.API_KEY,
+            "sortBy": "popularity"
         ]
         spinner.startAnimating()
         tableView.backgroundView = spinner
@@ -86,7 +87,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as! NewsTableViewCell
-        let data = self.news!.articles[indexPath.row]
+        guard let data = self.news?.articles[indexPath.row] else { return cell }
         cell.populateCell(image: data.urlToImage, title: data.title, author: data.author, publishedAt: data.publishedAt)
         return cell
     }

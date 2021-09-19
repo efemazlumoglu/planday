@@ -13,7 +13,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var publishedAt: UILabel!
-    let spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
     
     
     static var identifier: String {
@@ -21,12 +20,11 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func populateCell(image: String, title: String, author: String, publishedAt: String) {
-        self.spinner.startAnimating()
+        self.selectionStyle = .none
+        self.newsImageView?.downloaded(from: URL(string: image)!, contentMode: .scaleToFill)
         self.title.text = title
         self.author.text = author
         self.publishedAt.text = DateHelper.instance.getDate(date: publishedAt).dateMonthText
-        self.newsImageView?.downloaded(from: URL(string: image)!, contentMode: .scaleToFill)
         self.newsImageView.alpha = 0.4
-        self.spinner.stopAnimating()
     }
 }

@@ -23,11 +23,11 @@ class NewsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.spinner.startAnimating()
-        self.newsDetail.downloaded(from: URL(string: data!.urlToImage)!, contentMode: .scaleToFill)
-        self.titlr.text = data?.title
-        self.author.text = data?.author
-        self.desc.text = data?.description
-        self.sourceOfNews.text = data?.source.name
+        self.newsDetail.downloaded(from: URL(string: data!.urlToImage ?? "")!, contentMode: .scaleToFill)
+        self.titlr.text = data?.title ?? ""
+        self.author.text = data?.author ?? ""
+        self.desc.text = data?.description ?? ""
+        self.sourceOfNews.text = data?.source.name ?? ""
         self.spinner.stopAnimating()
     }
     
