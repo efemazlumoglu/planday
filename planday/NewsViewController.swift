@@ -47,6 +47,7 @@ class NewsViewController: UIViewController {
                 } catch {
                     print(error)
                     ShowAlert.instance.showAlertView(title: "Failure", message: "Something went wrong please try again later.", preferredStyle: .alert, okLabel: "OK", targetViewController: self, okHandler: nil)
+                    self.tableView.reloadData()
                 }
             }
         }
@@ -66,8 +67,7 @@ class NewsViewController: UIViewController {
         searchController.searchBar.placeholder = "Search For News"
         self.navigationItem.searchController = searchController
         self.definesPresentationContext = true
-        searchController.searchResultsUpdater = self
-        searchController.delegate = self
+        searchController.searchBar.delegate = self
     }
 }
 
@@ -106,19 +106,15 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension NewsViewController: UISearchResultsUpdating, UISearchControllerDelegate {
-
-    func updateSearchResults(for searchController: UISearchController) {
-        print("Searching with: " + (searchController.searchBar.text ?? ""))
-        let searchText = searchController.searchBar.text ?? ""
-        if searchText.count > 3 {
+extension NewsViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchText = searchBar.text ?? ""
+        if searchText.count > 2 {
             self.searchParameter = searchText
             getNews()
+        } else {
+            ShowAlert.instance.showAlertView(title: "Failure", message: "Cannot found anything.", preferredStyle: .alert, okLabel: "OK", targetViewController: self, okHandler: nil)
         }
     }
-    
-    
-    
-    
 }
 
